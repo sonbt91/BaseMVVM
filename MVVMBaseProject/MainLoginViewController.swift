@@ -11,7 +11,7 @@ import CodeBase
 import Register
 import Login
 
-class MainLoginViewController: BaseViewController {
+open class MainLoginViewController: BaseViewController {
     
     @IBOutlet weak var headerImageView: UIImageView!
     
