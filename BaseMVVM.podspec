@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'BaseMVVM'
-  s.version          = '0.1.0'
+  s.version          = '0.1.2'
   s.summary          = 'My base MVVM Pod'
  
   s.description      = <<-DESC

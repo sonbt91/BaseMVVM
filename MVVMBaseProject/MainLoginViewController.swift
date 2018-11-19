@@ -15,17 +15,17 @@ open class MainLoginViewController: BaseViewController {
     
     @IBOutlet weak var headerImageView: UIImageView!
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
+    override open var preferredStatusBarStyle: UIStatusBarStyle {
         return .default
     }
     
-    override func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
     }
     
-    override func setupUIComponents() {
+    override open func setupUIComponents() {
         super.setupUIComponents()
         
         self.headerImageView.image = UIImage.imageFromCodeBase(name: "pizza-icon")
