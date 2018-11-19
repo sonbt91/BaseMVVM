@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RegisterEmailCell" rowHeight="80" id="loJ-PV-9Ut" customClass="RegisterEmailCell" customModule="Register" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="loJ-PV-9Ut" id="ouc-fj-NJr">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="69.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crb-QN-bzC">
+                        <rect key="frame" x="10" y="0.0" width="310" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="zPQ-an-sV2"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="zhd-wB-tvb" customClass="BaseTextField" customModule="CodeBase">
+                        <rect key="frame" x="10" y="23" width="300" height="46.5"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <connections>
+                            <outlet property="delegate" destination="loJ-PV-9Ut" id="aF7-Pu-O1f"/>
+                        </connections>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="crb-QN-bzC" secondAttribute="trailing" id="4Ci-q1-o9j"/>
+                    <constraint firstAttribute="trailing" secondItem="zhd-wB-tvb" secondAttribute="trailing" constant="10" id="Hcn-3l-ffD"/>
+                    <constraint firstItem="zhd-wB-tvb" firstAttribute="leading" secondItem="ouc-fj-NJr" secondAttribute="leading" constant="10" id="KKV-jb-gbu"/>
+                    <constraint firstAttribute="bottom" secondItem="zhd-wB-tvb" secondAttribute="bottom" id="RmV-jD-goo"/>
+                    <constraint firstItem="zhd-wB-tvb" firstAttribute="top" secondItem="crb-QN-bzC" secondAttribute="bottom" constant="3" id="coK-u3-7tn"/>
+                    <constraint firstItem="crb-QN-bzC" firstAttribute="top" secondItem="ouc-fj-NJr" secondAttribute="top" id="d5k-ZC-qXF"/>
+                    <constraint firstItem="crb-QN-bzC" firstAttribute="leading" secondItem="ouc-fj-NJr" secondAttribute="leading" constant="10" id="oqV-o7-0vp"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="cIu-Rt-2Pr"/>
+            <connections>
+                <outlet property="emailTextField" destination="zhd-wB-tvb" id="gDx-DO-TyU"/>
+            </connections>
+            <point key="canvasLocation" x="-389" y="46"/>
+        </tableViewCell>
+    </objects>
+</document>

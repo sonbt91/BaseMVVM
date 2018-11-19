@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:MVVMBaseProject.xcodeproj">
+   </FileRef>
+   <Group
+      location = "container:"
+      name = "Modules">
+      <FileRef
+         location = "group:CodeBase/CodeBase.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Register/Register.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Login/Login.xcodeproj">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>
