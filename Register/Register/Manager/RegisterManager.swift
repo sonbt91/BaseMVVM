@@ -86,12 +86,14 @@ open class RegisterManager {
         
         let authenAPI = AuthenAPI.register(model: self.registerModel)
         let request = AuthenAPIProvider.rx.requestGetArray(ofType: Comment.self, authenAPI)
-        request.asObservable().subscribe(onNext: { [weak self] (result) in
+        request.asObservable().subscribe(onNext: { [weak self] (response) in
             self?.isLoading.accept(false)
-            if let array = result?.result {
-                array.forEach({ (comment) in
-                    print(comment.body)
-                })
+            
+            // Handel response
+            if let error = response?.error {
+                self?.result.accept((nil, error))
+            } else if let comments = response?.result, comments.count > 0 {
+                self?.result.accept((comments.first, nil))
             }
         }).disposed(by: self.disposeBag)
     }

@@ -33,21 +33,20 @@ open class MainLoginViewController: BaseViewController {
     
     @IBAction private func register(_ sender: Any) {
         
-        if let registerViewController = RegisterRouter().navigate(from: self, transitionType: .present, animated: true, completion: nil) as? RegisterViewController {
-            let registerManager = registerViewController.registerManager
-            registerManager.result.asObservable().subscribe(onNext: { (result) in
-                if let userProfile = result?.userProfile {
-                    LogDebug(userProfile.name)
-                    AlertManager.shared.show(Constant.AppName, message: "regsiter.success.message".localized(), buttons: [Constant.AlertDismissButtonTitle], tapBlock: { (_, _) in
-                        registerViewController.backOrDismiss()
-                    })
-                } else if let error = result?.error {
-                    self.handle(error, onDismissAlert: { [weak self] in
-                        self?.backOrDismiss()
-                    })
-                }
-            }).disposed(by: self.disposeBag)
-        }
+        guard let registerViewController = RegisterRouter().navigate(from: self, transitionType: .present, animated: true, completion: nil) as? RegisterViewController else { return  }
+        
+        // Capture & handle result of register flow
+        let registerManager = registerViewController.registerManager
+        registerManager.result.asObservable().subscribe(onNext: { (result) in
+            if let userProfile = result?.userProfile {
+                LogDebug(userProfile.name)
+                AlertManager.shared.show(Constant.AppName, message: "regsiter.success.message".localized(), buttons: [Constant.AlertDismissButtonTitle], tapBlock: { (_, _) in
+                    registerViewController.backOrDismiss()
+                })
+            } else if let error = result?.error {
+                self.handle(error, onDismissAlert: nil)
+            }
+        }).disposed(by: self.disposeBag)
     }
     
     @IBAction private func login(_ sender: Any) {

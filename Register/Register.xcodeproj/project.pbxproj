@@ -84,34 +84,26 @@
 		10369C53219E98F8004F1346 /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				106DE957219ED0D700929A21 /* RegisterRouter.swift */,
+				1050C3CC219EA9360037E547 /* RegisterViewController.swift */,
+				1050C3CD219EA9360037E547 /* RegisterViewController.xib */,
+				1084BDB421A2BE3D00A66895 /* Views */,
+				1084BD9821A2B25400A66895 /* Router */,
 				1050C3BC219EA8880037E547 /* Models */,
 				1050C3BB219EA87E0037E547 /* ViewModels */,
-				1050C3BA219EA8770037E547 /* View */,
-				106DE94E219EC93D00929A21 /* AuthenAPI */,
-				1050C3B5219EA8260037E547 /* Managers */,
+				106DE94E219EC93D00929A21 /* SericeAPI */,
+				1050C3B5219EA8260037E547 /* Manager */,
 				10369C54219E98F8004F1346 /* Register.h */,
 				10369C55219E98F8004F1346 /* Info.plist */,
 			);
 			path = Register;
 			sourceTree = "<group>";
 		};
-		1050C3B5219EA8260037E547 /* Managers */ = {
+		1050C3B5219EA8260037E547 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
 				1050C3B6219EA84B0037E547 /* RegisterManager.swift */,
 			);
-			path = Managers;
-			sourceTree = "<group>";
-		};
-		1050C3BA219EA8770037E547 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				1050C3CC219EA9360037E547 /* RegisterViewController.swift */,
-				1050C3CD219EA9360037E547 /* RegisterViewController.xib */,
-				1050C3BD219EA8BE0037E547 /* Cells */,
-			);
-			path = View;
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		1050C3BB219EA87E0037E547 /* ViewModels */ = {
@@ -144,12 +136,28 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		106DE94E219EC93D00929A21 /* AuthenAPI */ = {
+		106DE94E219EC93D00929A21 /* SericeAPI */ = {
 			isa = PBXGroup;
 			children = (
 				106DE94F219EC94A00929A21 /* AuthenAPI.swift */,
 			);
-			path = AuthenAPI;
+			path = SericeAPI;
+			sourceTree = "<group>";
+		};
+		1084BD9821A2B25400A66895 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				106DE957219ED0D700929A21 /* RegisterRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		1084BDB421A2BE3D00A66895 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1050C3BD219EA8BE0037E547 /* Cells */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		7874C81C040965E2F7B5A67F /* Frameworks */ = {

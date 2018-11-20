@@ -110,7 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				106DE973219F2D1E00929A21 /* SharedAssets.xcassets */,
-				1050C3B4219EA7C60037E547 /* ViewModels */,
+				1084BD9721A2B14600A66895 /* ViewModels */,
 				1050C3B1219EA7A50037E547 /* AppCenter */,
 				1050C37C219EA63D0037E547 /* Core */,
 				1050C37B219EA6380037E547 /* Services */,
@@ -240,7 +240,7 @@
 			path = AppCenter;
 			sourceTree = "<group>";
 		};
-		1050C3B4219EA7C60037E547 /* ViewModels */ = {
+		1084BD9721A2B14600A66895 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 			);

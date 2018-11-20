@@ -12,7 +12,7 @@ import CodeBase
 class LaunchingRouter: Router {
     
     @discardableResult
-    func navigate(from root: AnyScreen?, transitionType: TransitionType, animated: Bool, completion: (() -> Void)?) -> AnyScreen? {
+    func navigate(from root: AnyScreen?, transitionType: TransitionType, animated: Bool, completion: (() -> Void)?) -> AnyObject? {
         let launchingViewController = LaunchingViewController.initFromDefaultXib()
         RoutingExecutor.navigate(from: root, to: launchingViewController, transitionType: transitionType, animated: animated, completion: completion)
         return launchingViewController

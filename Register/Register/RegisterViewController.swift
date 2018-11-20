@@ -76,16 +76,16 @@ open class RegisterViewController: BaseViewController {
         }).disposed(by: self.disposeBag)
         
         // Result
+        // Consider to handle at either this controller or where the flow is invoked
+        
 //        self.registerManager.result.asObservable().subscribe(onNext: { (result) in
 //            if let userProfile = result?.userProfile {
 //                LogDebug(userProfile.name)
-//                AlertManager.shared.show(Constant.AppName, message: "regsiter.success.message".localized(), buttons: [Constant.AlertDismissButtonTitle], tapBlock: { [weak self]  (_, _) in
+//                AlertManager.shared.show(Constant.AppName, message: "regsiter.success.message".localized(), buttons: [Constant.AlertDismissButtonTitle], tapBlock: { (_, _) in
 //                    self?.backOrDismiss()
 //                })
 //            } else if let error = result?.error {
-//                self.handle(error, onDismissAlert: { [weak self] in
-//                    self?.backOrDismiss()
-//                })
+//                self.handle(error, onDismissAlert: nil)
 //            }
 //        }).disposed(by: self.disposeBag)
     }

@@ -14,7 +14,7 @@ open class LoginRouter: Router {
     public init() { }
     
     @discardableResult
-    public func navigate(from root: AnyScreen?, transitionType: TransitionType, animated: Bool, completion: (() -> Void)?) -> AnyScreen? {
+    public func navigate(from root: AnyScreen?, transitionType: TransitionType, animated: Bool, completion: (() -> Void)?) -> AnyObject? {
         let loginViewController = LoginViewController.initFromDefaultXib()
         RoutingExecutor.navigate(from: root, to: loginViewController.embedInNavigationController(), transitionType: transitionType, animated: animated, completion: completion)
         return loginViewController

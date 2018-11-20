@@ -14,7 +14,7 @@ open class RegisterRouter: Router {
     public init () {}
     
     @discardableResult
-    open func navigate(from root: AnyScreen?, transitionType: TransitionType, animated: Bool, completion: (() -> Void)?) -> AnyScreen? {
+    open func navigate(from root: AnyScreen?, transitionType: TransitionType, animated: Bool, completion: (() -> Void)?) -> AnyObject? {
         let registerViewController = RegisterViewController.initFromDefaultXib()
         RoutingExecutor.navigate(from: root, to: registerViewController.embedInNavigationController(), transitionType: .present, animated: animated, completion: completion)
         return registerViewController
