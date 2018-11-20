@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'BaseMVVM'
-  s.version          = '0.1.2'
+  s.version          = '1.1.0'
   s.summary          = 'My base MVVM Pod'
  
   s.description      = <<-DESC
@@ -57,7 +57,8 @@ s.dependency 'Moya/RxSwift', '~> 11.0'
 s.dependency 'SwiftyJSON'
 
 # 8
-s.source_files = "BaseMVVM/**/*.{swift}"
+#s.source_files = "BaseMVVM/**/*.{swift}"
+s.source_files = "BaseMVVM/*"
 
 # 9
 s.resources = "BaseMVVM/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
